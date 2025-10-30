@@ -22,3 +22,27 @@ def sum_of_digits(n):
 
 print(sum_of_digits(144))
 print(sum_of_digits(9999))
+"""
+    Let me explain how this code works and why `split()`` isn't needed:
+
+    The function `sum_of_digits(n)` calculates the sum of all digits in a given number n. Here's how it works:
+
+    `sum = 0` - Initializes a variable to store the running total of the digits.
+    `for digit in str(n):` - This line does two things:
+    `str(n)` converts the input number to a string, allowing us to iterate over each digit.
+    The loop then goes through each character (digit) in this string one by one.
+    `sum += int(digit)` - For each digit:
+    `int(digit)` converts the string digit back to an integer.
+    `+=` adds this integer to our running total.
+    Finally, `return sum` gives us the total sum of all digits.
+    Why `split()` isn't needed:
+
+    `split()` is used to split strings based on a delimiter (like spaces or commas).
+    When you convert a number to a string using `str(n)`, you can directly iterate over its characters without splitting because strings in Python are already sequences of characters.
+    For example, if n = 123:
+
+    str(123) gives '123'
+    Iterating over '123' gives you '1', '2', '3' in sequence
+    Each is converted back to an integer and added to the sum
+    The code is already efficient and Pythonic as it is!
+"""
