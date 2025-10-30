@@ -14,10 +14,10 @@ def sum_of_digits(n):
         4. Convert each digit back to an integer and add it to the sum
         5. Return the sum of the digits
     """
-    sum = 0
+    total = 0
     for digit in str(n):
-        sum += int(digit)
-    return sum
+        total += int(digit)
+    return total
 
 
 print(sum_of_digits(144))
