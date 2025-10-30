@@ -22,6 +22,7 @@ def is_palindrome(s):
     return s == s[::-1]
 
 print(is_palindrome("wilabaliw"))
+print(is_palindrome("A man a plan a canal Panama"))
 
 """
     Let me break down the code line by line:
