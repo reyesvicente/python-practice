@@ -35,3 +35,34 @@ def longest_substring(s):
 print(longest_substring("abcabcbb"))
 print(longest_substring("bbbbb"))
 print(longest_substring("pwwkew"))
+
+"""
+    Let me break down the code line by line:
+
+    python
+    def longest_substring(s):
+        left = 0  # Left pointer of the sliding window
+        right = 0  # Right pointer of the sliding window
+        max_length = 0  # Tracks the length of the longest valid substring found
+        char_set = set()  # A set to store unique characters in the current window
+
+        while right < len(s):  # Continue until right pointer reaches end of string
+            if s[right] not in char_set:  # If current character is not in the set
+                char_set.add(s[right])  # Add it to the set
+                right += 1  # Move right pointer to the right
+                max_length = max(max_length, right - left)  # Update max length
+            else:  # If current character is already in the set
+                char_set.remove(s[left])  # Remove leftmost character from set
+                left += 1  # Move left pointer to the right
+        return max_length  # Return the length of longest substring found
+    How it works:
+    Uses a sliding window approach with left and right pointers
+    The window [left, right) contains only unique characters
+    When we find a duplicate, we shrink the window from the left until all characters are unique again
+    We keep track of the maximum window size we've seen](cascade:incomplete-link)
+    For the example "abcabcbb":
+    Window expands to "abc" (length 3)
+    Then shrinks to "bca" → "cab" → "abc" → "cb" → "b" (maintaining max length 3)
+    Final result is 3
+    The time complexity is O(n) where n is the length of the string, as each character is processed exactly twice (once by each pointer).
+    """
