@@ -39,3 +39,44 @@ def two_sum(lst, target):
 
 print(two_sum([2, 7, 11, 15], 9))
 print(two_sum([3, 2, 4], 6))
+
+
+"""
+    Let me break down the two-sum solution line by line:
+
+    python
+    def two_sum(lst, target):
+        # Initialize an empty dictionary to store numbers we've seen and their indices
+        value_to_index = {}
+
+        # Loop through each number in the list along with its index
+        for i, num in enumerate(lst):
+            # Calculate what number we need to find in our dictionary to reach the target
+            complement = target - num
+
+            # Check if we've already seen the complement number
+            if complement in value_to_index:
+                # If found, return the current index and the stored index of the complement
+                return (value_to_index[complement], i)
+
+            # If not found, store the current number and its index in the dictionary
+            value_to_index[num] = i
+
+        # This line is a safety net (though problem states a solution exists)
+        return (-1, -1)
+    Example Walkthrough: For
+    two_sum([2, 7, 11, 15], 9)
+    :
+
+    First iteration (i=0, num=2):
+    complement = 9 - 2 = 7
+    7 not in dictionary
+    Store {2: 0}
+    Second iteration (i=1, num=7):
+    complement = 9 - 7 = 2
+    2 is in dictionary (value is 0)
+    Return (0, 1)
+    The algorithm efficiently finds the solution in O(n) time with O(n) space complexity by trading space for speed using a hash map.
+
+
+"""
