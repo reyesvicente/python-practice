@@ -74,3 +74,53 @@ def compress_string(s):
 print(compress_string("abcccccaab"))  # Expected: a1b1c5a2b1
 print(compress_string("abc"))         # Expected: abc
 print(compress_string("aaaa"))        # Expected: a4
+
+"""
+    Let me break down the code line by line:
+
+    python
+    def compress_string(s):
+        Function documentation with pseudo code
+        # Handle empty or None strings
+        if s is None or len(s) == 0:  # Check if input is None or empty
+            return s                   # Return as-is if empty or None
+
+        compressed = ""               # Initialize empty string to store compressed result
+        count = 1                     # Initialize counter for current character
+        current_char = s[0]           # Store first character to start comparison
+
+        # Iterate through the string starting from the second character
+        for i in range(1, len(s)):    # Loop from index 1 to end of string
+            if s[i] == current_char:  # If current character matches previous
+                count += 1            # Increment the counter
+            else:
+                # If character changes, append previous character and its count
+                compressed += current_char + str(count)
+                current_char = s[i]   # Update current character to new character
+                count = 1             # Reset counter for new character
+
+        # After loop ends, add the last character and its count
+        compressed += current_char + str(count)
+
+        # Return the shorter string (compressed or original)
+        if len(compressed) <= len(s):  # If compressed isn't longer than original
+            return compressed          # Return compressed version
+        else:
+            return s                   # Otherwise return original string
+    Example Walkthrough:
+    For input "abcccccaab":
+
+    Starts with 'a', count=1
+    Next 'b' is different → append 'a1'
+    'b' count=1, next 'c' is different → append 'b1'
+    'c' count starts at 1, increments to 5 → append 'c5'
+    'a' count=2 → append 'a2'
+    'b' count=1 → append 'b1'
+    Final compressed: "a1b1c5a2b1" (10 chars) vs original (9 chars) → returns original
+    For input "abc":
+
+    Compressed would be "a1b1c1" (6 chars) vs original (3 chars) → returns original "abc"
+    For input "aaaa":
+
+    Compressed is "a4" (2 chars) vs original (4 chars) → returns "a4"
+"""
