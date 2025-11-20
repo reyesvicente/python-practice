@@ -57,5 +57,20 @@ print(permutations([1, 2, 3]))
 
 
 """
-
+    - Lines 1–9: File header and problem statement — describes the task (generate all permutations, return list of tuples) and gives a hint.
+    - def permutations(lst): — declares the function that accepts one parameter, lst.
+    - Triple-quoted block (docstring) — contains pseudocode/documentation only; not executed.
+    - if len(lst) <= 1: — base-case check: list has 0 or 1 element.
+    - return [tuple(lst)] — return a one-element list containing lst converted to a tuple (e.g., [] -> [()], [x] -> [(x,)]).
+    - result = [] — create an empty list to collect permutations.
+    - for i in range(len(lst)): — iterate over every index in lst; treat each element as the fixed first item in turn.
+    - current_element = lst[i] — pick the element at index i.
+    - remaining_elements = lst[:i] + lst[i+1:] — build a new list with all elements except the current one.
+    - sub_permutations = permutations(remaining_elements) — recursively compute permutations of the remaining elements.
+    - for sub_perm in sub_permutations: — iterate over each returned permutation tuple.
+    - new_permutation = (current_element,) + sub_perm — form a new tuple by prepending the current element to the sub-permutation.
+    - result.append(new_permutation) — add the new permutation tuple to the results list.
+    - return result — after the loops, return the list of all permutation tuples.
+    - print(permutations([1, 2, 3])) — call the function with [1,2,3] and print the returned permutations.
+    - Final triple-quote lines — stray/empty quotes at the end of the file; harmless but unnecessary and can be removed for cleanliness.
 """
