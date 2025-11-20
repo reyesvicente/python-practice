@@ -81,3 +81,74 @@ def spiral_matrix(matrix):
     return result
 
 print(spiral_matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
+
+"""
+    Here is a line-by-line explanation of the
+    spiral_matrix
+    function:
+
+    1. Edge Case Handling
+    python
+    if matrix is None or matrix == []:
+        return []
+    Check: It first checks if the input
+    matrix
+    is None or an empty list [].
+    Action: If either is true, it immediately returns an empty list [] because there are no elements to traverse.
+    2. Initialization
+    python
+    result = []
+    top = 0
+    bottom = len(matrix) - 1
+    left = 0
+    right = len(matrix[0]) - 1
+    result = []: Creates an empty list to store the numbers as we find them.
+    top = 0: Sets the boundary for the top row (starts at index 0).
+    bottom = len(matrix) - 1: Sets the boundary for the bottom row (last index of rows).
+    left = 0: Sets the boundary for the left column (starts at index 0).
+    right = len(matrix[0]) - 1: Sets the boundary for the right column (last index of columns).
+    3. The Main Loop
+    python
+    while top <= bottom and left <= right:
+    Condition: The loop continues as long as the boundaries haven't crossed each other. If top exceeds bottom or left exceeds right, it means we have finished traversing the entire matrix.
+    4. Traverse Top Row (Left → Right)
+    python
+        for i in range(left, right + 1):
+            result.append(matrix[top][i])
+        top += 1
+    Loop: Iterates through columns from left to right.
+    Append: Adds the elements of the current top row to result.
+    Update: top += 1 moves the top boundary down by one, effectively "removing" the row we just processed.
+    5. Traverse Right Column (Top → Bottom)
+    python
+        for i in range(top, bottom + 1):
+            result.append(matrix[i][right])
+        right -= 1
+    Loop: Iterates through rows from the new top to bottom.
+    Append: Adds the elements of the current right column to result.
+    Update: right -= 1 moves the right boundary left by one, "removing" the column we just processed.
+    6. Traverse Bottom Row (Right → Left)
+    python
+        if top <= bottom:
+            for i in range(right, left - 1, -1):
+                result.append(matrix[bottom][i])
+            bottom -= 1
+    Check (if top <= bottom): This is crucial! Since we moved top down earlier, we must ensure we haven't already finished the rows. This prevents processing the same row twice in a single-row matrix.
+    Loop: Iterates backwards from right down to left.
+    Append: Adds elements of the bottom row to result.
+    Update: bottom -= 1 moves the bottom boundary up.
+    7. Traverse Left Column (Bottom → Top)
+    python
+        if left <= right:
+            for i in range(bottom, top - 1, -1):
+                result.append(matrix[i][left])
+            left += 1
+    Check (if left <= right): Similar to the previous check, this ensures we don't re-process a column if the right boundary has moved past left.
+    Loop: Iterates backwards from bottom up to top.
+    Append: Adds elements of the left column to result.
+    Update: left += 1 moves the left boundary to the right.
+    8. Return Result
+    python
+    return result
+    Once the while loop finishes (boundaries have crossed), the function returns the final result list containing the spiral order.
+"""
