@@ -42,17 +42,6 @@ def permutations(lst):
     if len(lst) <= 1:
         return [tuple(lst)]
 
-        result = []
-
-        for i in range(len(lst)):
-            current_element = lst[i]
-            remaining_elements = lst[:i] + lst[i+1:]
-            sub_permutations = permutations(remaining_elements)
-
-            for sub_perm in sub_permutations:
-                new_permutation = (current_element,) + sub_perm
-                result.append(new_permutation)
-        return result
     result = []
     for i in range(len(lst)):
         current_element = lst[i]
@@ -65,3 +54,8 @@ def permutations(lst):
     return result
 
 print(permutations([1, 2, 3]))
+
+
+"""
+
+"""
