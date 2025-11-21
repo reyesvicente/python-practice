@@ -1,10 +1,20 @@
-# Python Practice Problems
+| 40 | Maximum Subarray Sum | Advanced | Arrays, Algorithms |
+| 41 | Intersection of Two Arrays | Intermediate | Lists, Hash Maps |
+| 42 | Happy Number | Intermediate | Math, Sets |
+| 43 | Isomorphic Strings | Intermediate | Strings, Hash Maps |
+| 44 | Ransom Note | Beginner | Strings, Dictionaries |
+| 45 | Count and Say | Intermediate | Strings, Logic |
+| 46 | LRU Cache | Advanced | Data Structures, OOP |
+| 47 | Number of Islands | Advanced | 2D Arrays, DFS/BFS |
+| 48 | Merge Intervals | Advanced | Intervals, Sorting |
+| 49 | Coin Change | Advanced | Dynamic Programming |
+| 50 | Median of Two Sorted Arrays | Advanced | Binary Search, Arrays |# Python Practice Problems
 
 A collection of beginner to intermediate Python problems to help you hone your problem-solving skills.
 
 ## Overview
 
-This repository contains 30 carefully designed problems that cover fundamental to advanced Python concepts including:
+This repository contains 40 carefully designed problems that cover fundamental to advanced Python concepts including:
 - String manipulation and analysis
 - List operations and transformations
 - Loops and conditionals
@@ -31,7 +41,7 @@ This repository contains 30 carefully designed problems that cover fundamental t
 | 12 | Reverse a String | Beginner | Strings, Loops |
 | 13 | Character Frequency | Intermediate | Strings, Dictionaries |
 | 14 | Find Min/Max | Intermediate | Lists, Comparisons |
-| 15 | Remove Outliers | Advafnced | Math, Statistics |
+| 15 | Remove Outliers | Advanced | Math, Statistics |
 | 16 | Merge Sorted Lists | Intermediate | Lists, Algorithms |
 | 17 | Rotate List | Intermediate | Lists, Indexing |
 | 18 | Group Anagrams | Advanced | Strings, Dictionaries |
@@ -47,6 +57,16 @@ This repository contains 30 carefully designed problems that cover fundamental t
 | 28 | Permutations | Advanced | Recursion, Algorithms |
 | 29 | Spiral Matrix | Advanced | 2D Arrays, Algorithms |
 | 30 | Word Ladder Length | Advanced | Graph Theory, BFS |
+| 31 | Roman Numeral to Integer | Intermediate | Strings, Dictionaries |
+| 32 | Contains Duplicate | Beginner | Lists, Sets |
+| 33 | Valid Parentheses | Intermediate | Strings, Stacks |
+| 34 | First Unique Character | Intermediate | Strings, Hash Maps |
+| 35 | Missing Number in Range | Intermediate | Lists, Math |
+| 36 | Majority Element | Intermediate | Lists, Logic |
+| 37 | Implement Queue with Stacks | Advanced | Data Structures, OOP |
+| 38 | Symmetric Tree | Advanced | Trees, Recursion |
+| 39 | Path Sum | Advanced | Trees, Recursion |
+| 40 | Maximum Subarray Sum | Advanced | Arrays, Algorithms |
 
 ## How to Use
 
@@ -80,11 +100,11 @@ This repository contains 30 carefully designed problems that cover fundamental t
 
 ## Difficulty Progression
 
-**Beginner Level (Problems 1-7, 12, 21, 26):** Focus on basic syntax, loops, and string/list manipulation
+**Beginner Level (Problems 1-7, 12, 21, 26, 32, 44):** Focus on basic syntax, loops, and string/list manipulation
 
-**Intermediate Level (Problems 6, 8-10, 11, 13-14, 16-17, 19, 22, 24-25, 27):** Introduce more complex logic, data structures, algorithms, and searching
+**Intermediate Level (Problems 6, 8-10, 11, 13-14, 16-17, 19, 22, 24-25, 27, 31, 33-36, 41-43, 45):** Introduce more complex logic, data structures, algorithms, and searching
 
-**Advanced Level (Problems 15, 18, 20, 23, 28-30):** Challenge yourself with complex algorithms, mathematical concepts, recursion, and multi-step problem-solving
+**Advanced Level (Problems 15, 18, 20, 23, 28-30, 37-40, 46-50):** Challenge yourself with complex algorithms, data structures, dynamic programming, trees, recursion, and multi-step problem-solving
 
 ## Solutions
 
@@ -97,7 +117,7 @@ Once you've attempted a problem, feel free to ask for:
 
 ## Next Steps
 
-After completing these 20 problems, consider:
+After completing these 40 problems, consider:
 - Solving problems on platforms like LeetCode, HackerRank, or CodeWars
 - Building small projects to apply these concepts
 - Exploring more advanced topics like object-oriented programming and decorators
