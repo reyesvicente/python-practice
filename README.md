@@ -1,15 +1,3 @@
-| 40 | Maximum Subarray Sum | Advanced | Arrays, Algorithms |
-| 41 | Intersection of Two Arrays | Intermediate | Lists, Hash Maps |
-| 42 | Happy Number | Intermediate | Math, Sets |
-| 43 | Isomorphic Strings | Intermediate | Strings, Hash Maps |
-| 44 | Ransom Note | Beginner | Strings, Dictionaries |
-| 45 | Count and Say | Intermediate | Strings, Logic |
-| 46 | LRU Cache | Advanced | Data Structures, OOP |
-| 47 | Number of Islands | Advanced | 2D Arrays, DFS/BFS |
-| 48 | Merge Intervals | Advanced | Intervals, Sorting |
-| 49 | Coin Change | Advanced | Dynamic Programming |
-| 50 | Median of Two Sorted Arrays | Advanced | Binary Search, Arrays |# Python Practice Problems
-
 A collection of beginner to intermediate Python problems to help you hone your problem-solving skills.
 
 ## Overview
