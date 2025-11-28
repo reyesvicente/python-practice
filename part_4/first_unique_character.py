@@ -8,4 +8,17 @@
 # Example: first_unique_char("aabb") should return -1
 
 def first_unique_char(s):
-    pass
+    char_counts = {}
+    for char in s:
+        if char in char_counts:
+            char_counts[char] += 1
+        else:
+            char_counts[char] = 1
+    for i, char in enumerate(s):
+        if char_counts[char] == 1:
+            return i
+    return -1
+
+print(first_unique_char("leetcode"))
+print(first_unique_char("loveleetcode"))
+print(first_unique_char("aabb"))
