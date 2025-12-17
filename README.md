@@ -15,20 +15,20 @@ This repository contains 40 carefully designed problems that cover fundamental t
 
 | # | Problem | Difficulty | Topics |
 |---|---------|-----------|--------|
-| 1 | Sum of Digits | Beginner | Loops, Math |
+| 1 | *Sum of Digits* | Beginner | Loops, Math |
 | 2 | Palindrome Checker | Beginner | Strings, Logic |
 | 3 | Find Missing Number | Beginner | Lists, Math |
 | 4 | Count Vowels | Beginner | Strings, Loops |
 | 5 | Reverse a List | Beginner | Lists, Loops |
 | 6 | Duplicate Removal | Intermediate | Lists, Sets |
 | 7 | Factorial | Beginner | Recursion/Loops, Math |
-| 8 | FizzBuzz | Intermediate | Loops, Conditionals |
+| 8 | *FizzBuzz* | Intermediate | Loops, Conditionals |
 | 9 | Most Frequent Element | Intermediate | Lists, Dictionaries |
 | 10 | Flatten a Nested List | Intermediate | Lists, Recursion |
 | 11 | Check if Prime | Intermediate | Math, Loops |
 | 12 | Reverse a String | Beginner | Strings, Loops |
 | 13 | Character Frequency | Intermediate | Strings, Dictionaries |
-| 14 | Find Min/Max | Intermediate | Lists, Comparisons |
+| 14 | *Find Min/Max* | Intermediate | Lists, Comparisons |
 | 15 | Remove Outliers | Advanced | Math, Statistics |
 | 16 | Merge Sorted Lists | Intermediate | Lists, Algorithms |
 | 17 | Rotate List | Intermediate | Lists, Indexing |
