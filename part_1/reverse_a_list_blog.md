@@ -1,0 +1,67 @@
+# Problem 5: Reverse a List (without using reverse())
+
+Hey everyone! 👋
+
+Today, we're tackling a fundamental problem: **Reversing a List** manually.
+
+## The Problem
+
+The goal is to write a function that reverses a list without using the built-in `reverse()` method or slicing with `[::-1]`. This is a great exercise to understand how list indexing works.
+
+**Example:**
+- `reverse_list([1, 2, 3, 4])` should return `[4, 3, 2, 1]`
+
+## The Solution
+
+Here is the Python implementation using a loop:
+
+```python
+def reverse_list(lst):
+    """
+    Reverses a list by iterating backwards.
+    """
+    reversed_list = []
+    # Loop from the last index to 0
+    for i in range(len(lst)-1, -1, -1):
+        reversed_list.append(lst[i])
+
+    return reversed_list
+
+# Test case
+print(reverse_list([1, 2, 3, 4]))
+# Output: [4, 3, 2, 1]
+```
+
+## Code Breakdown
+
+Let's walk through the code line by line:
+
+1.  **`def reverse_list(lst):`**
+    *   Defines a function named `reverse_list` that takes one parameter `lst` (a list).
+
+2.  **`reversed_list = []`**
+    *   Creates an empty list called `reversed_list` to store the reversed elements.
+
+3.  **`for i in range(len(lst)-1, -1, -1):`**
+    *   Starts a loop that will iterate from the last index of the list to the first (0).
+    *   `len(lst)-1` is the starting index (last element).
+    *   `-1` (the second argument) is the stopping index (stops before -1, so 0 is included).
+    *   `-1` (The third argument) is the step (counts backwards).
+
+4.  **`reversed_list.append(lst[i])`**
+    *   For each iteration, it takes the element at index `i` from the original list and appends it to `reversed_list`.
+
+5.  **`return reversed_list`**
+    *   Returns the new list with elements in reverse order.
+
+### Example Walkthrough with `[1, 2, 3, 4]`
+
+1.  `i` starts at 3 (value 4), appends 4 to `reversed_list`.
+2.  `i` becomes 2 (value 3), appends 3.
+3.  `i` becomes 1 (value 2), appends 2.
+4.  `i` becomes 0 (value 1), appends 1.
+5.  Returns `[4, 3, 2, 1]`.
+
+---
+
+Happy coding! 💻
